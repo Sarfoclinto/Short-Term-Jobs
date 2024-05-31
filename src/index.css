@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.debug{
+  border: 1px solid red;
+}
+.dark-bg{
+  background-color: #120d42;
+}
+#logo span{
+  color: #2d18eb;
+}
+.cus-grid{
+  display: grid;
+  grid-template-columns: 2fr 5fr;
+  height: 100%;
+}
+.hero{
+  height: 610px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
