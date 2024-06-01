@@ -27,3 +27,13 @@
   object-fit: cover;
   object-position: center;
 }
+.login-bg{
+  background: rgb(31,31,31);
+background: linear-gradient(109deg, rgba(31,31,31,1) 0%, rgba(63,94,99,1) 88%, rgba(0,72,87,1) 99%, rgba(255,255,255,1) 99%, rgba(255,255,255,1) 100%);
+}
+.login{
+  background-image: url(src/assets/login-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
