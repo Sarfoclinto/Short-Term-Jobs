@@ -4,7 +4,7 @@ import { UserContext } from "../context/Users";
 
 function SignUp() {
   const { setSignUpModal } = useContext(ModalContext);
-  const { signup, setSignup } = useContext(UserContext);
+  const { signup, setSignup, setSignedup } = useContext(UserContext);
 
   const signupChange = (event) => {
     const { name, value, checked, type } = event.target;
@@ -25,11 +25,7 @@ function SignUp() {
       body: JSON.stringify(signup),
     })
       .then((res) => {
-        if (!res.ok) {
-          throw new Error("Something went wrong");
-        } else {
-          console.log("Signup successful");
-        }
+        setSignedup(true);
         return res.json();
       })
       .then(() => {
@@ -47,6 +43,7 @@ function SignUp() {
         setSignUpModal(false);
       })
       .catch((err) => {
+        setSignedup(false);
         console.log(err);
       });
   };

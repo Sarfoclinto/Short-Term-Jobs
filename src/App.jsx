@@ -12,6 +12,7 @@ import Modal from "./Modals/Modal";
 import ModalContextProvider from "./context/Modals";
 import UsersContextProvider from "./context/Users";
 import Dashboard from "./components/Dashboard";
+import MainLayout from "./components/MainLayout";
 
 function App() {
   return (
@@ -23,11 +24,13 @@ function App() {
               <Route path="/" element={<LandingPage />} />
               <Route path="/login" element={<LoginPage />} />
               <Route path="/main" element={<PrivateRoute />}>
-                <Route path="dashboard" element={<Dashboard />} />
-                <Route path="deals" element={<Deals />} />
-                <Route path="processing" element={<Processing />} />
-                <Route path="settings" element={<Settings />} />
-                <Route path="business" element={<Business />} />
+                <Route element={<MainLayout />}>
+                  <Route path="dashboard" element={<Dashboard />} />
+                  <Route path="deals" element={<Deals />} />
+                  <Route path="processing" element={<Processing />} />
+                  <Route path="settings" element={<Settings />} />
+                  <Route path="business" element={<Business />} />
+                </Route>
               </Route>
             </Routes>
           </div>
