@@ -1,13 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import HeaderLink from "../components/HeaderLink";
+import { ModalContext } from "../context/Modals";
+import SignUpModal from "../Modals/SignUpModal";
+import SignUp from "../components/SignUp";
+import { useNavigate } from "react-router-dom";
 
 function LandingPage() {
+  const { signUpModal, setSignUpModal } = useContext(ModalContext);
+  const navigate = useNavigate();
   return (
     <div
       id="landingpage"
-      className="rounded-lg w-full h-full bg-blue-950 text-white flex flex-col"
+      className="relative rounded-lg w-full h-full bg-blue-950 text-white flex flex-col"
     >
+      {/* <SignUpModal open={signUpModal} closemodal={setSignUpModal}>
+        <SignUp />
+      </SignUpModal> */}
       <header className="w-full flex justify-between items-center py-2 px-2">
         <div id="logo">
           <img src="" alt="" />
@@ -39,11 +48,16 @@ function LandingPage() {
           </p>
 
           <div className="flex flex-col w-full items-center py-4 gap-5 mt-6">
-            <Link to="" className="w-2/3">
-              <button className="border px-10 font-semibold py-2 rounded-3xl w-full">
-                Sign Up
-              </button>
-            </Link>
+            <button
+              onClick={() => {
+                navigate("/login");
+                setSignUpModal(true);
+              }}
+              className="border px-10 font-semibold py-2 rounded-3xl w-2/3"
+            >
+              Sign Up
+            </button>
+
             <Link to="login" className="w-2/3">
               <button className="border px-10 font-semibold py-2 rounded-3xl w-full bg-blue-700 hover:bg-blue-600">
                 Log In
