@@ -15,9 +15,19 @@ function SignUp() {
       };
     });
   };
+  const [image, setImage] = useState(null);
+  const imageChange = (event) => {
+    setImage(URL.createObjectURL(event.target.files[0]));
+  };
 
   const signupSubmit = (event) => {
-    fetch("http://localhost:8000/allUsers", {
+    setSignup((prev) => {
+      return {
+        ...prev,
+        img: image,
+      };
+    });
+    fetch("http://localhost:8000/users", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

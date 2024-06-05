@@ -13,6 +13,7 @@ import ModalContextProvider from "./context/Modals";
 import UsersContextProvider from "./context/Users";
 import Dashboard from "./components/Dashboard";
 import MainLayout from "./components/MainLayout";
+import Categories from "./components/Categories";
 
 function App() {
   return (
@@ -25,7 +26,8 @@ function App() {
               <Route path="/login" element={<LoginPage />} />
               <Route path="/main" element={<PrivateRoute />}>
                 <Route element={<MainLayout />}>
-                  <Route path="dashboard" element={<Dashboard />} />
+                  <Route index path="dashboard" element={<Dashboard />} />
+                  <Route path="category" element={<Categories />} />
                   <Route path="deals" element={<Deals />} />
                   <Route path="processing" element={<Processing />} />
                   <Route path="settings" element={<Settings />} />

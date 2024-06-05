@@ -19,6 +19,7 @@ function UsersContextProvider(props) {
       gender: "",
       password: "",
       tel: "",
+      img: ""
     });
     const [currentUser, setCurrentUser] = useState({
       id: "",
@@ -41,7 +42,7 @@ function UsersContextProvider(props) {
       });
     };
     useEffect(() => {
-      fetch("http://localhost:8000/allUsers")
+      fetch("http://localhost:8000/users")
         .then((res) => {
           if (!res) {
             throw Error("Response not found");

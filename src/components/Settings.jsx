@@ -1,9 +1,7 @@
 import React from 'react'
 
 function Settings() {
-  return (
-    <div>Settings</div>
-  )
+  return <div className="text-white font-bold text-3xl">Settings</div>;
 }
 
 export default Settings

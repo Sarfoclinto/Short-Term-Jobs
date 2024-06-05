@@ -37,3 +37,16 @@ background: linear-gradient(109deg, rgba(31,31,31,1) 0%, rgba(63,94,99,1) 88%, r
   background-position: center;
   background-size: cover;
 }
+.bg-dashboard{
+  background-color: rgb(38, 38, 44);
+}
+.bg-outlet{
+  background-color: rgb(28, 28, 32);
+}
+.logo{
+  object-fit: cover;
+  object-position: center;
+}
+.active{
+  background-color: rgb(49, 52, 59);
+}

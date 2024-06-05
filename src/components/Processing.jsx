@@ -1,9 +1,7 @@
 import React from 'react'
 
 function Processing() {
-  return (
-    <div>Processing</div>
-  )
+  return <div className="text-white font-bold text-3xl">Processing</div>;
 }
 
 export default Processing
