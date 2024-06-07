@@ -21,16 +21,32 @@ function UsersContextProvider(props) {
       tel: "",
       img: ""
     });
-    const [currentUser, setCurrentUser] = useState({
+  
+  const [currentUser, setCurrentUser] = useState(
+    JSON.parse(sessionStorage.getItem("currentUser")) || {
       id: "",
       first_name: "",
       last_name: "",
       email: "",
       gender: "",
       password: "",
-    });
+    }
+  );
+  useEffect(() => {
+    sessionStorage.setItem("currentUser", JSON.stringify(currentUser));
+  }, [currentUser]);
 
-    const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(
+    sessionStorage.getItem("isAuthenticated") || false
+  );
+
+  useEffect(() => {
+    sessionStorage.setItem("isAuthenticated", JSON.stringify(isAuthenticated));
+  }, [isAuthenticated]);
+
+  
+
+ 
 
     const loginChange = (event) => {
       const { name, value } = event.target;

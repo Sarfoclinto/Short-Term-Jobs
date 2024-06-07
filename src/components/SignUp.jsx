@@ -15,18 +15,12 @@ function SignUp() {
       };
     });
   };
-  const [image, setImage] = useState(null);
-  const imageChange = (event) => {
-    setImage(URL.createObjectURL(event.target.files[0]));
-  };
+  // const [image, setImage] = useState(null);
+  // const imageChange = (event) => {
+  //   setImage(URL.createObjectURL(event.target.files[0]));
+  // };
 
   const signupSubmit = (event) => {
-    setSignup((prev) => {
-      return {
-        ...prev,
-        img: image,
-      };
-    });
     fetch("http://localhost:8000/users", {
       method: "POST",
       headers: {

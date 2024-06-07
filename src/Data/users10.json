@@ -27,7 +27,7 @@
       "email": "ethanwatson@gmail.com",
       "gender": "Male",
       "password": "1111100000",
-      "username":"lyk_watson-ethan",
+      "username": "lyk_watson-ethan",
       "img": "https://cdn.pixabay.com/photo/2015/08/05/04/25/people-875617_640.jpg"
     },
     {
@@ -106,7 +106,7 @@
       "email": "danielwilson@gmail.com",
       "gender": "Male",
       "password": "9999900000",
-      "username": "famousWil@son"
+      "username": "famousWil@son",
       "img": "https://cdn.pixabay.com/photo/2016/09/30/22/02/wedding-1706514_640.jpg"
     },
     {
@@ -119,6 +119,28 @@
       "password": "thisismypasswrod",
       "tel": "0595792992",
       "img": "https://cdn.pixabay.com/photo/2023/10/10/11/05/gentlemen-8306182_640.jpg"
+    },
+    {
+      "id": "f7ba",
+      "first_name": "Virgile",
+      "last_name": "Austin",
+      "email": "virgile@gmail.com",
+      "username": "virgiledat",
+      "gender": "Male",
+      "password": "123",
+      "tel": "0595792992",
+      "img": ""
+    },
+    {
+      "id": "2339",
+      "first_name": "peter",
+      "last_name": "despite",
+      "email": "perterdespite@gmail.com",
+      "username": "peterdespite",
+      "gender": "Male",
+      "password": "1111111",
+      "tel": "0595792992",
+      "img": ""
     }
   ]
 }

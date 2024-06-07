@@ -50,3 +50,9 @@ background: linear-gradient(109deg, rgba(31,31,31,1) 0%, rgba(63,94,99,1) 88%, r
 .active{
   background-color: rgb(49, 52, 59);
 }
+.active-tab{
+  background-color: #011222;
+}
+.my-shadow{
+  box-shadow: 1px 1px 3px #10508b;
+}

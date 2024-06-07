@@ -15,12 +15,10 @@ function Sidelinks({ name, img, to }) {
         <img src={`/src/assets/${img}.png`} alt="" className="w-2/12 logo" />
         <p className="text-purple-700 font-semibold text-lg hover:text-black">
           <NavLink
-            style={({ isActive }) => (
-              {
-                color: isActive ? "white" : "purple",
-                backgroundColor: isActive ? "inherit" : "inherit",
-              }
-            )}
+            style={({ isActive }) => ({
+              color: isActive ? "white" : "#011222",
+              backgroundColor: isActive ? "inherit" : "inherit",
+            })}
             to={`/${to}`}
           >
             {name}

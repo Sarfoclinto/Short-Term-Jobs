@@ -12,8 +12,8 @@ function Sidebar() {
           className="w-[35px] logo rounded-xl cursor-pointer"
         />
         <h3 className="font-bold text-purple-700 text-2xl">
-          H<span className="text-purple-300">ome</span>P
-          <span className="text-purple-300">age</span>
+          W<span className="text-purple-300">el</span>C
+          <span className="text-purple-300">ome</span>
         </h3>
       </div>
 
@@ -42,7 +42,7 @@ function Sidebar() {
           <Sidelinks name="Processing" img="processing" to="main/processing" />
         </ul>
         <ul>
-          <Sidelinks name="Business" img="news" to="main/business" />
+          <Sidelinks name="Business News" img="news" to="main/business" />
           <Sidelinks name="Settings" img="settings" to="main/settings" />
         </ul>
       </nav>
